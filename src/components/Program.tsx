@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Heart, Activity, Lightbulb } from 'lucide-react';
+import { Lightbulb } from 'lucide-react';
 
 const Program = () => {
   const sessions = [
@@ -42,12 +42,15 @@ const Program = () => {
     <section className="w-full py-16 px-8 md:px-16 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center mb-12">
-          <h2 className="text-5xl font-black">Le programme</h2>
           <div className="ml-4">
-            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M40 10C23.4315 10 10 23.4315 10 40C10 56.5685 23.4315 70 40 70C56.5685 70 70 56.5685 70 40C70 23.4315 56.5685 10 40 10Z" fill="#E9D5E9" fillOpacity="0.2"/>
-              <path d="M30 25L50 40L30 55" stroke="#E9D5E9" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
+            <div className="relative inline-block">
+              <h2 className="text-5xl font-bold">Programme</h2>
+              <img
+                  src={`${import.meta.env.BASE_URL}traits_violet.png`}
+                  alt="Décoration"
+                  className="absolute -top-2 left-[99%] w-12"
+              />
+            </div>
           </div>
         </div>
 
@@ -56,30 +59,53 @@ const Program = () => {
             <p className="text-lg mb-8">
               Chaque programme se compose de 6 séances individuelles d'une heure, adaptées selon vos besoins et vos objectifs.
             </p>
-            <div className="border border-gray-300 p-6 rounded-md relative">
-              <div className="absolute -top-4 -right-4">
+            <div className="border border-serenite-purple p-2">
+            <div className="border border-gray-300 p-6 relative">
+              {/* Icône Lightbulb centrée en haut */}
+              <div className="absolute -top-6 left-1/2 -translate-x-1/2">
                 <Lightbulb size={32} className="text-purple-400" />
               </div>
+
               <p className="text-center text-lg font-medium">
                 Ces séances peuvent se dérouler en physique ou en visio.
               </p>
             </div>
+            </div>
           </div>
+
 
           <div className="w-full md:w-7/12">
             <div className="grid grid-cols-4 gap-2">
               <div className="col-span-1"></div>
               <div className="col-span-1 bg-green-200 p-3 flex flex-col items-center justify-center rounded-md">
-                <Brain size={24} className="mb-2" />
-                <div className="text-center font-bold">LA TÊTE</div>
+                <div className="text-center font-bold text-white">LA TÊTE</div>
+                <img
+                    src={`${import.meta.env.BASE_URL}4.png`}
+                    alt="la tete"
+                    width={64}
+                    height={64}
+                    className="text-white pt-6"
+                />
               </div>
               <div className="col-span-1 bg-red-200 p-3 flex flex-col items-center justify-center rounded-md">
-                <Heart size={24} className="mb-2" />
-                <div className="text-center font-bold">LE CŒUR</div>
+                <div className="text-center font-bold text-white">LE CŒUR</div>
+                <img
+                    src={`${import.meta.env.BASE_URL}5.png`}
+                    alt="le coeur"
+                    width={64}
+                    height={64}
+                    className="text-white pt-8"
+                />
               </div>
               <div className="col-span-1 bg-blue-200 p-3 flex flex-col items-center justify-center rounded-md">
-                <Activity size={24} className="mb-2" />
-                <div className="text-center font-bold">LE CORPS</div>
+                <div className="text-center font-bold text-white">LE CORPS</div>
+                <img
+                    src={`${import.meta.env.BASE_URL}6.png`}
+                    alt="le corps"
+                    width={64}
+                    height={64}
+                    className="text-white pt-8"
+                />
               </div>
 
               {sessions.map((session, index) => (

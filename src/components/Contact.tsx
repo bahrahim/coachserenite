@@ -12,10 +12,14 @@ const Contact = () => {
     <section className="w-full py-16 px-8 md:px-16 bg-purple-100">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center mb-12">
-          <h2 className="text-5xl font-black">Alors, on en discute ?</h2>
           <div className="ml-4">
-          <div className="absolute top-106 left-100">
-              <img src="/public/traits_violet.png" alt="Guillemets violets" width={60} height={60} />
+            <div className="relative inline-block">
+              <h2 className="text-5xl font-bold">Alors on en discute ?</h2>
+              <img
+                  src={`${import.meta.env.BASE_URL}traits_violet.png`}
+                  alt="Décoration"
+                  className="absolute -top-2 left-[99%] w-12"
+              />
             </div>
           </div>
         </div>

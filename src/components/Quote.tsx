@@ -12,7 +12,13 @@ const Quote = () => {
         <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
           <div className="max-w-4xl p-8 text-center">
           <div className="absolute top-106 left-100">
-              <img src="/public/Guillemets-violet.png" alt="Guillemets violets" width={60} height={60} />
+            <img
+                src={`${import.meta.env.BASE_URL}Guillemets-violet.png`}
+                alt="le corps"
+                width={64}
+                height={64}
+                className="text-white pt-15"
+            />
             </div>
             <div className="bg-white p-7 opacity-25">
             <h2 className="text-4xl md:text-5xl font-black text-black mb-4">

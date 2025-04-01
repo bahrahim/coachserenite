@@ -33,7 +33,7 @@ const Hero = () => {
         <div>
           <button 
             onClick={handleDiagnosticClick}
-            className="bg-purple-200 hover:bg-purple-300 text-black font-bold py-2 px-6 rounded-md transition duration-300"
+            className="bg-purple-200 hover:bg-purple-300 text-black font-bold py-2 px-6 transition duration-300"
           >
             Faire un diagnostic gratuit
           </button>

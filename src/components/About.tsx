@@ -5,14 +5,16 @@ const About = () => {
       <section className="w-full py-16 px-8 md:px-16 relative">
         <div className="">
           <div className="flex items-center mb-12 relative">
-            <h2 className="text-5xl font-black relative">Qui suis-je ?</h2>
-
-            {/* Image des traits violets positionnée en haut à droite du point d'interrogation */}
-            <img
-                src="/traits_violet.png"
-                alt="Guillemets violets"
-                className="absolute -top-2 right-60 w-12 h-12"
-            />
+            <div className="ml-4">
+              <div className="relative inline-block">
+                <h2 className="text-5xl font-bold">Qui suis-je ?</h2>
+                <img
+                    src={`${import.meta.env.BASE_URL}traits_violet.png`}
+                    alt="Décoration"
+                    className="absolute -top-2 left-[99%] w-12"
+                />
+              </div>
+            </div>
           </div>
 
           <div className="flex flex-col md:flex-row bg-rose-100 ">
