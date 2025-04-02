@@ -2,11 +2,8 @@
 const Hero = () => {
   const handleDiagnosticClick = () => {
     // Placeholder for Calendly redirection
-    alert("Le Calendly n'est pas encore créé. Cette fonctionnalité sera disponible prochainement.");
-    // When Calendly is ready, uncomment the line below and replace with actual Calendly URL
-    // window.open('https://calendly.com/coach-serenite/diagnostic', '_blank');
+    window.open('https://calendly.com/alisoncoachserenite/diagnostic-gratuit', '_blank');
   };
-
   return (
     <section className="w-full flex flex-col md:flex-row">
       <div className="w-full md:w-1/2 bg-pink-50 p-8 md:p-16 flex flex-col justify-center">
