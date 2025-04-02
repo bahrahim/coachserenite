@@ -7,13 +7,15 @@ interface FormData {
     nom: string;
     email: string;
     message: string;
+    telephone: string; // Ajout du champ telephone
 }
 
 export function ContactForm() {
     const [formData, setFormData] = useState<FormData>({
         nom: '',
         email: '',
-        message: ''
+        message: '',
+        telephone: '', // Initialisation du champ telephone
     });
     const [isLoading, setIsLoading] = useState(false);
 
@@ -29,13 +31,14 @@ export function ContactForm() {
                     from_name: formData.nom,
                     from_email: formData.email,
                     message: formData.message,
+                    from_telephone: formData.telephone, // Envoi du telephone avec les autres données
                 },
-                'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+                'YOUR_PUBLIC_KEY' // Remplacer par ta clé publique EmailJS
             );
 
             if (result.status === 200) {
                 toast.success('Message envoyé avec succès!');
-                setFormData({ nom: '', email: '', message: '' });
+                setFormData({ nom: '', email: '', message: '', telephone: '' }); // Réinitialisation du formulaire
             }
         } catch (error) {
             toast.error('Erreur lors de l\'envoi du message. Veuillez réessayer.');
@@ -93,15 +96,28 @@ export function ContactForm() {
                     </div>
 
                     <div className="relative">
-            <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                className="w-full px-4 py-3 border-2 border-purple-200 rounded-lg focus:outline-none focus:border-purple-400 transition-colors h-40 resize-none"
-                placeholder="Message"
-                required
-                disabled={isLoading}
-            />
+                        <input
+                            type="text"
+                            name="telephone"
+                            value={formData.telephone}
+                            onChange={handleChange}
+                            className="w-full px-4 py-3 border-2 border-purple-200 rounded-lg focus:outline-none focus:border-purple-400 transition-colors"
+                            placeholder="Numéro de téléphone"
+                            required
+                            disabled={isLoading}
+                        />
+                    </div>
+
+                    <div className="relative">
+                        <textarea
+                            name="message"
+                            value={formData.message}
+                            onChange={handleChange}
+                            className="w-full px-4 py-3 border-2 border-purple-200 rounded-lg focus:outline-none focus:border-purple-400 transition-colors h-40 resize-none"
+                            placeholder="Message"
+                            required
+                            disabled={isLoading}
+                        />
                     </div>
 
                     <div className="flex justify-end">
