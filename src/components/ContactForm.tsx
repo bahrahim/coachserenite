@@ -41,15 +41,15 @@ export function ContactForm() {
 
         try {
             const result = await emailjs.send(
-                'service_bw6i2o5',
-                'template_0w73hhf',
+                'service_4itw5n1',
+                'template_jlqmh3o',
                 {
                     from_name: formData.nom,
                     from_email: formData.email,
                     message: formData.message,
                     from_telephone: formData.telephone, // Envoi du téléphone avec les autres données
                 },
-                '0eeR1Pfxc5U4bzLao' // Remplacer par ta clé publique EmailJS
+                '2XsRxcU91g5JwpKBp' // Remplacer par ta clé publique EmailJS
             );
 
             if (result.status === 200) {
