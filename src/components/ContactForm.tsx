@@ -7,7 +7,7 @@ interface FormData {
     nom: string;
     email: string;
     message: string;
-    telephone: string; // Ajout du champ telephone
+    telephone: string; // Champ téléphone
 }
 
 export function ContactForm() {
@@ -15,12 +15,28 @@ export function ContactForm() {
         nom: '',
         email: '',
         message: '',
-        telephone: '', // Initialisation du champ telephone
+        telephone: '', // Initialisation du champ téléphone
     });
     const [isLoading, setIsLoading] = useState(false);
+    const [telephoneError, setTelephoneError] = useState(''); // Pour gérer les erreurs de téléphone
+
+    // Fonction de validation pour le téléphone
+    const validatePhoneNumber = (number: string) => {
+        const phoneRegex = /^[0-9]{10}$/; // Vérifie que le numéro est composé de 10 chiffres
+        return phoneRegex.test(number);
+    };
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+
+        // Validation du numéro de téléphone
+        if (!validatePhoneNumber(formData.telephone)) {
+            setTelephoneError('Le numéro de téléphone doit contenir 10 chiffres.');
+            return;
+        } else {
+            setTelephoneError('');
+        }
+
         setIsLoading(true);
 
         try {
@@ -31,14 +47,16 @@ export function ContactForm() {
                     from_name: formData.nom,
                     from_email: formData.email,
                     message: formData.message,
-                    from_telephone: formData.telephone, // Envoi du telephone avec les autres données
+                    from_telephone: formData.telephone, // Envoi du téléphone avec les autres données
                 },
-                'YOUR_PUBLIC_KEY' // Remplacer par ta clé publique EmailJS
+                '0eeR1Pfxc5U4bzLao' // Remplacer par ta clé publique EmailJS
             );
 
             if (result.status === 200) {
                 toast.success('Message envoyé avec succès!');
-                setFormData({ nom: '', email: '', message: '', telephone: '' }); // Réinitialisation du formulaire
+                // Réinitialisation du formulaire et de l'erreur
+                setFormData({ nom: '', email: '', message: '', telephone: '' });
+                setTelephoneError('');
             }
         } catch (error) {
             toast.error('Erreur lors de l\'envoi du message. Veuillez réessayer.');
@@ -106,6 +124,9 @@ export function ContactForm() {
                             required
                             disabled={isLoading}
                         />
+                        {telephoneError && (
+                            <p className="text-red-500 text-sm mt-2">{telephoneError}</p>
+                        )}
                     </div>
 
                     <div className="relative">
