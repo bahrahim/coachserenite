@@ -1,14 +1,14 @@
+@font-face {
+  font-family: "Satisfy-Regular";
+  src: url("./fonts/Satisfy-Regular.ttf");
+}
+
+@font-face {
+  font-family: "YesevaOne-Regular";
+  src: url("./fonts/YesevaOne-Regular.ttf");
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html {
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', serif;
-  }
-}

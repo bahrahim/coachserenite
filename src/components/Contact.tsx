@@ -14,7 +14,7 @@ const Contact = () => {
         <div className="flex items-center mb-12">
           <div className="ml-4">
             <div className="relative inline-block">
-              <h2 className="text-5xl font-bold">Alors on en discute ?</h2>
+              <h2 className="text-5xl font-bold font-satisfy">Alors on en discute ?</h2>
               <img
                   src={`${import.meta.env.BASE_URL}traits_violet.png`}
                   alt="Décoration"

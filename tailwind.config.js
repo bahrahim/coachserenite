@@ -13,10 +13,8 @@ export default {
       },
       fontFamily: {
         'pacifico': ['Pacifico', 'cursive'],
-        'poppins': ['Poppins', 'sans-serif'],
-        'roboto': ['Roboto', 'sans-serif'],
-        'roboto-mono': ['Roboto Mono', 'monospace'],
-        'spicy-rice': ['Spicy Rice', 'cursive']
+        'satisfy': ['Satisfy-Regular', 'sans-serif'],
+        'yeseva': ['YesevaOne-Regular', 'serif'],
       }
     },
   },

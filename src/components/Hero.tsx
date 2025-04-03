@@ -7,13 +7,13 @@ const Hero = () => {
   return (
     <section className="w-full flex flex-col md:flex-row">
       <div className="w-full md:w-1/2 bg-pink-50 p-8 md:p-16 flex flex-col justify-center">
-        <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight">
+        <h1 className="font-yeseva text-5xl md:text-6xl font-black mb-6 leading-tight">
           Votre bien-être commence ici.
         </h1>
-        <p className="text-lg mb-8">
+        <p className="font-satisfy text-lg mb-8">
           Coach sérénité, la 1ère méthode pour une transformation profonde et durable.
         </p>
-        <ul className="mb-8 space-y-2">
+        <ul className="mb-8 space-y-2 font-satisfy">
           <li className="flex items-start">
             <span className="mr-2">•</span>
             <span>3 aspects du bien-être selon vos besoins</span>
@@ -30,7 +30,7 @@ const Hero = () => {
         <div>
           <button 
             onClick={handleDiagnosticClick}
-            className="bg-purple-200 hover:bg-purple-300 text-black font-bold py-2 px-6 transition duration-300"
+            className="font-yeseva bg-purple-200 hover:bg-purple-300 text-black font-bold py-2 px-6 transition duration-300"
           >
             Faire un diagnostic gratuit
           </button>
