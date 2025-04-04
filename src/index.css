@@ -13,5 +13,21 @@
 @tailwind utilities;
 
 h1 {
-  font-family: 'Satisfy', cursive;
+  font-family: 'YesevaOne-Regular', cursive;
+}
+
+h2 {
+  font-family: 'YesevaOne-Regular', cursive;
+}
+
+ul {
+  font-family: 'Satisfy-Regular', cursive;
+}
+
+p {
+  font-family: 'Yeseva', cursive;
+}
+
+button {
+  font-family: 'YesevaOne-Regular', cursive;
 }

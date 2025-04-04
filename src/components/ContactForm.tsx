@@ -79,7 +79,7 @@ export function ContactForm() {
             <div className="w-full max-w-2xl">
                 <div className="text-center mb-12">
                     <h1 className="text-5xl font-black mb-6">Une question ?</h1>
-                    <p className="text-xl text-gray-700" style={{ fontFamily: 'Comic Sans MS, cursive' }}>
+                    <p className="text-xl text-gray-700">
                         Je vous invite à me laisser vos coordonnées pour que je puisse
                         vous apporter une réponse personnalisée.
                     </p>
@@ -93,7 +93,7 @@ export function ContactForm() {
                                 name="nom"
                                 value={formData.nom}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 border-2 border-purple-200 rounded-lg focus:outline-none focus:border-purple-400 transition-colors"
+                                className="font-satisfy px-4 py-3 border-2 border-purple-200 rounded-lg focus:outline-none focus:border-purple-400 transition-colors"
                                 placeholder="Nom"
                                 required
                                 disabled={isLoading}
@@ -105,7 +105,7 @@ export function ContactForm() {
                                 name="email"
                                 value={formData.email}
                                 onChange={handleChange}
-                                className="w-full px-4 py-3 border-2 border-purple-200 rounded-lg focus:outline-none focus:border-purple-400 transition-colors"
+                                className="font-satisfy w-full px-4 py-3 border-2 border-purple-200 rounded-lg focus:outline-none focus:border-purple-400 transition-colors"
                                 placeholder="E-mail"
                                 required
                                 disabled={isLoading}
@@ -119,7 +119,7 @@ export function ContactForm() {
                             name="telephone"
                             value={formData.telephone}
                             onChange={handleChange}
-                            className="w-full px-4 py-3 border-2 border-purple-200 rounded-lg focus:outline-none focus:border-purple-400 transition-colors"
+                            className="font-satisfy w-full px-4 py-3 border-2 border-purple-200 rounded-lg focus:outline-none focus:border-purple-400 transition-colors"
                             placeholder="Numéro de téléphone"
                             required
                             disabled={isLoading}
@@ -134,7 +134,7 @@ export function ContactForm() {
                             name="message"
                             value={formData.message}
                             onChange={handleChange}
-                            className="w-full px-4 py-3 border-2 border-purple-200 rounded-lg focus:outline-none focus:border-purple-400 transition-colors h-40 resize-none"
+                            className="font-satisfy w-full px-4 py-3 border-2 border-purple-200 rounded-lg focus:outline-none focus:border-purple-400 transition-colors h-40 resize-none"
                             placeholder="Message"
                             required
                             disabled={isLoading}
