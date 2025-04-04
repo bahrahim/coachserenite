@@ -12,8 +12,7 @@ const Header = () => {
       <div>
         <button 
           onClick={handleDiagnosticClick}
-          className="bg-serenite-purple text-black font-bold py-2 px-6 transition duration-300"
-        >
+          className="font-yeseva bg-serenite-purple text-black font-bold py-2 px-6 transition duration-300">
           Faire un diagnostic gratuit
         </button>
       </div>
